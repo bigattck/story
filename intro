@@ -1,0 +1,691 @@
+define h = Character('Haru', color="#ffffff")
+
+define hi = Character('Hina', color="#ffffff")
+
+define m = Character('Mai', color="#ffffff")
+
+define t = Character('Mai & Hina', color="#ffffff")
+
+define r = Character('Ryuu', color="#ffffff")
+
+define j = Character('Jackson Five', color="#ffffff")
+
+image haru_N = "haru_normal.png"
+
+image haru_H = "haru_happy.png"
+
+image haru_S = "haru_sad.png"
+
+image haru_A = "haru_angry.png"
+
+image hina_N = "hina_normal.png"
+
+image hina_H = "hina_happy.png"
+
+image hina_S = "hina_sad.png"
+
+image hina_SH = "hina_shock.png"
+
+image hina_A = "hina_angry.png"
+
+image hina_W = "hina_worry.png"
+
+image mai_N = "mai_normal.png"
+
+image mai_H = "mai_happy.png"
+
+image mai_S = "mai_sad.png"
+
+image mai_SH = "mai_shock.png"
+
+image mai_A = "mai_angry.png"
+
+image mai_W = "mai_worry.png"
+
+image ryuu_N = "ryuu_normal.png"
+
+image ryuu_H = "ryuu_happy.png"
+
+image ryuu_S = "ryuu_sad.png"
+
+image ryuu_A = "ryuu_angry.png"
+
+image jack_N = "jack_normal.png"
+
+image jack_H = "jack_happy.png"
+
+image jack_A = "jack_angry.png"
+
+image jack_W = "jack_worry.png"
+
+image fire = "fire.jpg"
+
+#Bamboo forest
+
+image Bforest = "Bforest.jpg"
+
+#ruin House
+
+image ruinH = "ruinH.jpg"
+
+#Ryuu house Inside
+
+image RhouseI = "RhouseI.jpg"
+
+# Ryuu house Outside
+
+image RhouseO = "RhouseO.jpg"
+
+# Summon oni Jackson
+
+image SoniJ = "SoniJ.jpg"
+
+#moon Maze
+
+image moonM = "moonM.jpg"
+
+#Water level
+
+image Wlevel = "Wlevel.jpg"
+
+image room = "room.jpg"
+
+image village = "village.jpg"
+
+#Bamboo forest oni Summon
+
+image BforestS = "BforestS.jpg"
+
+image roof = "roof.jpg"
+
+label start:
+    
+    #The title bourgeois is a characteristic of the middle class, it offen reference to their values or attitudes.
+    
+    scene fire
+    
+    play music "war.mp3"
+    
+    "Japan, 1573: Sengoku period"
+    
+    "It's the time of war, as the mainland of Japan start fighting for peace and power."
+    
+    "The islands near japan were the only safe place, however family trouble are the only war around the islands."
+    
+    hide fire
+    
+    scene Bforest
+    
+    "One merchant traded his bag of silk for a scroll that can help summon an Oni that grands any wish."
+    
+    hide Bforest
+    
+    scene Rhouse
+    
+    "Needing 1 more girl with the same age, he decided to steal the child and eliminate his rivals"
+    
+    "Haru, losing everything sworn revenge on Ryuu."
+    
+    hide Rhouse
+    
+    scene RhouseI
+    
+    stop music
+    
+    play music "peace.mp3"
+    
+    "Present day, 7 years later"
+    
+    show mai_H at left
+    
+    m "No no no, you doing it wrong and making yourself foolish."
+    
+    show hina_A at right
+    
+    hi "I dont like being a Geisha!"
+    
+    hide mai_H
+    
+    hide hina_A
+    
+    show mai_N at left
+    
+    show hina_H at right
+    
+    #imperial Court is a foreshadowing.
+    
+    hi "I want to play the Komabue, its my dream to play for the Imperial Court."
+    
+    "Mai softy hits Hina"
+    
+    hide hina_H
+    
+    show hina_N at right
+    
+    hi "Not with the war your not, father said we must do this."
+    
+    hi "You don't want to make him mad do you?"
+    
+    hide mai_N
+    
+    show mai_W at left
+    
+    m "Nooo..."
+    
+    hi "Lets try it again, lunch is calling me."
+    
+    hide mai_W
+    
+    show mai_N at left
+    
+    m "Lets rest until lunch time."
+    
+    hide hina_N
+    
+    show hina_A at right
+    
+    hi "Are trying to get us in trouble?"
+    
+    hide hina_A
+    
+    show hina_H at left
+    
+    #Ohajiki is "marbles game" version of japan
+    
+    hi "They will hear us play Ohajiki so lets take it outside."
+    
+    hide hina_H
+    
+    hide mai_N
+    
+    hide RhouseI
+    
+    scene Bforest
+    
+    show mai_H at left
+    
+    show hina_H at right
+label hop1:
+    
+    m "Alright, ready... rock, paper, scissors, shoot!"
+    
+    menu:
+        
+        "Pick rock":
+            jump neat
+            
+        "Pick scissors":
+            jump again
+            
+        "Pick paper":
+            jump winner
+            
+label neat:
+    
+    m "I won!"
+    
+    hide hina_H
+    
+    show hina_A at right
+    
+    hi "You cheated!, you stop 2 seconds and picked the opposite."
+    
+    m "I didn't do such thing."
+    
+    hi "Why are you looking away..."
+    
+    m "I'm not looking away."
+    
+    hi "You got to be kidding me!"
+    
+    r "Huf gim"
+    
+    hide hina_A
+    
+    hide mai_H
+    
+    show hina_W at right
+    
+    show mai_W at left
+    
+    show ryuu_N at center
+    
+    r "May I ask, why you girls aren't at the house practicing."
+    
+    t "We sorry..."
+    
+    r "Go back to the house before I decide to give your lunch to Lancer."
+    
+    t "Yes father..."
+    
+    hide ryuu_N
+    
+    hide mai_W
+    
+    hide hina_W
+    
+    show hina_H at right
+    
+    show mai_H at left
+    
+    m "I hate Lancer, he eats like a dog."
+    
+    hi "He is a dog."
+    
+    hide hina_H
+    
+    hide mai_H
+    
+    hide Bforest
+    
+    stop music
+    
+    jump storyline
+    
+label again:
+    
+    m "Oh... again."
+    
+    jump hop1
+    
+label winner:
+    
+    m "I won!"
+    
+    hi "So close."
+    
+    show ryuu_N at center
+    
+    r "Girls stop playing."
+    
+    hide mai_H
+    
+    hide hina_H
+    
+    show mai_W at left
+    
+    show hina_W at right
+    
+    r "May I ask, why you girls aren't at the house practicing."
+    
+    t "We sorry..."
+    
+    r "Go back to the house before I decide to give your lunch to Lancer."
+    
+    t "Yes father..."
+    
+    hide ryuu_N
+    
+    hide mai_W
+    
+    hide hina_W
+    
+    show hina_H at right
+    
+    show mai_H at left
+    
+    m "I hate Lancer, he eats like a dog."
+    
+    hi "He is a dog."
+    
+    hide hina_H
+    
+    hide mai_H
+    
+    hide Bforest
+    
+    stop music
+    
+    jump storyline
+    
+label storyline:
+    
+    stop music
+    
+    play music "war.mp3"
+    
+    scene black
+    
+    h "Lost everything..."
+    
+    h "All I have now is my child, my dear Mariko... you will get avenge!"
+    
+    hide black
+    
+    scene village
+    
+    show haru_N at center
+    
+    h "My fellow man, I think you on behalf on taking your time to work with me."
+    
+    hide haru_N
+    
+    show haru_A at center
+    
+    h "The plan is simple has it goes, killing Ryuu is my job everyone will fight his guards."
+    
+    hide haru_A
+    
+    show haru_N at center
+    
+    h "Bring the child named 'Hina' safe and I make sure you get paid well."
+    
+    play sound "yay.mp3"
+    
+    hide haru_N
+    
+    show haru_A at center
+    
+    h "Settle down, first we need to finish the job."
+    
+    h "So onwords to Ryuu house."
+    
+    hide haru_A
+    
+    stop music
+    
+    hide village
+    
+    scene black
+    
+    play music "dreamingB.mp3"
+    
+    show hina_W at left
+    
+    hi "Father!"
+    
+    hi "Monther..."
+    
+    hi "Brother..."
+    
+    show haru_S at right
+    
+    h "Hina!"
+    
+    hide haru_S with fade
+    
+    hi "Father don't leave me..."
+    
+    show ryuu_H at right
+    
+    r "Ahahahaha!"
+    
+    hide ryuu_H with fade
+    
+    hi "no..."
+    
+    hi "NO!"
+    
+    hide black
+    
+    hide hina_W
+    
+    scene room
+    
+    show hina_S at left
+    
+    show mai_W at right
+    
+    m "That dream again."
+    
+    hi "Ya..."
+    
+    m "Its o.k, this is not the first time it happen."
+    
+    m "It could turn out like before."
+    
+    hide hina_S
+    
+    show hina_W at left
+    
+    hi "I still dont want to get merry."
+    
+    stop music
+    
+    play music "peace.mp3"
+    
+    hide mai_W
+    
+    show mai_H at right
+    
+    m "What if the boy turns out to be very cute."
+    
+    hide hina_W
+    
+    show hina_H at left
+    
+    hi "What ew no."
+    
+    hi "Boys are gross, I saw one jumping in a mud puddle."
+    
+    m "Your right they are gross."
+    
+    m "Lets gets some sleep, we still have to perform for them."
+    
+    hi "o.k"
+    
+    hide hina_H
+    
+    hide mai_H
+    
+    hide room
+    
+    stop music
+    
+    scene Bforest
+    
+    show haru_A at right
+    
+    play sound "horse.mp3"
+    
+    h "..."
+    
+    h "On my mark men!"
+    
+    #war2 is a 4min sound of warriors fighting
+    
+    play music "war2.mp3"
+    
+    h "GO!"
+    
+    hide Bforest
+    
+    hide haru_A
+    
+    scene room
+    
+    show mai_W at left
+    
+    m "Hina! wake up!"
+    
+    show hina_W at center
+    
+    hi "Eh... it sounds like fighting..."
+    
+    m "It is fighting."
+    
+    m "Oh I knew one of these days would have come..."
+    
+    hi "What you talking about?"
+    
+    show ryuu_N at right
+    
+    r "Girls we leaving, your monther is waiting west side of the house."
+    
+    r "Do as she saids."
+    
+    hide mai_W
+    
+    show mai_A at left
+    
+    m "NO!"
+    
+    hide ryuu_N
+    
+    show ryuu_A at right
+    
+    r "What was that?!"
+    
+    m "I know you stole her, Hina doesn't look anything like Mother or you."
+    
+    r "you ungrateful child, you shouldn't talk to men like that."
+    
+    hide mai_A
+    
+    hide hina_W
+    
+    "Mai grab Hina hand and ran to the sound of fighting"
+    
+    hide ryuu_A
+    
+    scene Bforest
+    
+    show mai_A at center
+    
+    show hina_W at left
+    
+    m "A little more and you can see your real father."
+    
+    hi "My real father... but what about you!"
+    
+    m "Umm i didn't plan that out yet..."
+    
+    play sound "buzz.mp3"
+    
+    hide mai_A
+    
+    hide hina_W
+    
+    show mai_SH at right
+    
+    show hina_SH at left
+    
+    t "?!"
+    
+    m "The ritual that he build I forgot!"
+    
+    hide mai_SH
+    
+    hide hina_SH
+    
+    show ryuu_H at left
+    
+    r "Yes! say hello to your new emperor!"
+    
+    hide ryuu_H
+    
+    hide Bforest
+    
+    stop music
+    
+    scene BforestS
+    
+    play music "evil.mp3"
+    
+    show jack_H at center
+    
+    j "Yes free! That scroll really did a number on me."
+    
+    show ryuu_H at left
+    
+    r "An oni?! Well pay for what you get I guess."
+    
+    j "Oh so you the one who build the ritual and was going to use two young girls."
+    
+    show haru_A at right
+    
+    h "Ryuu!"
+    
+    "Jackson blocked him off."
+    
+    j "Hold it."
+    
+    h "Great oni this man is a murder, he killed my wife and now he killed two kids to summon you."
+    
+    hide jack_H
+    
+    show jack_W at center
+    
+    j "Yes i'm awere but I want things to be more intersting."
+    
+    play sound "magic.mp3"
+    
+    "Jackson use his magic to bring back the girls."
+    
+    hide haru_A
+    
+    hide ryuu_H
+    
+    hide jack_W
+    
+    scene roof
+    
+    show jack_H at center
+    
+    j "You miserable humans think you can, just summon an oni and get your wish granted?"
+    
+    j "We are not your puppets and so I putting all of you to a test, expect the people who are hire by these two."
+    
+    "Jackson ponits at Ryuu and Haru."
+    
+    play sound "magic.mp3"
+    
+    hide jack_H
+    
+    "Everyone who was not pick saw people disappear."
+    
+    hide roof
+    
+    stop music
+    
+    play music "mystery.mp3"
+    
+    scene moonM
+    
+    show hina_W at left
+    
+    hi "Where i'm I..."
+    
+    show mai_H at right
+    
+    m "Thank goodness you alright."
+    
+    hide hina_W
+    
+    show hina_N at left
+    
+    hide mai_H
+    
+    show mai_N at right
+    
+    hi "Is that the eath..."
+    
+    j "Why, yes it is and your on the moon."
+    
+    m "The moon?! It looks like a maze to me."
+    
+    j "Ya I change it up a bit but still a moon."
+    
+    hide hina_N
+    
+    show hina_A at left
+    
+    hi "Show yourself, we dont want any part of your plans or anyones."
+    
+    j "Umm no... Its been 1000 years since anyone summon me."
+    
+    j "Play my game and i'll let you out."
+    
+    m "Fine..."
+    
+    hide hina_A
+    
+    show hina_N at left
+    
+    hi "Mai why?"
+    
+    m "He did save us, we should at least play his game."
+    
+    hi "o.k..."
+    
+    j "Good, now pick a card."
